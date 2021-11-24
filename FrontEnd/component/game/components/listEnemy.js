@@ -1,4 +1,4 @@
-export const zombieList = [
+const zombieList = [
     {
         seconds: 1.5,
         quantity: 1,

@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(GameOver.jpg);
+    background-size: cover;
+    
+    
+}
+.buttons button{
+    color: rgb(241, 233, 233) !important;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    background: rgba(0, 0,0,0);
+    border: 10px solid;
+    border-color: rgb(235, 223, 223);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 100px;
+}
+button:hover {
+    background: rgb(238, 229, 229);
+    color: #fff !important;
+}

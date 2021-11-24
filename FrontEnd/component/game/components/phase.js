@@ -4,7 +4,14 @@
      }
 
      configureColisions(){
-         this.relatedScene.physics.add.collider(this.relatedScene.cheem, this.plataform, null,null, this.relatedScene);
-         //this.relatedScene.physics.add.collider(this.relatedScene.zombies,this.plataform,null,null, this.relatedScene);
+         this.relatedScene.physics.add.collider(this.cheem, this.groundBottom, null, null, null);
+     }
+
+     configureColisionsZombi(){
+         this.relatedScene.physics.add.collider(this.cheem, this.zombies, this.relatedScene.zombieImpact, null, this.relatedScene);
+     }
+
+     configureColisionsObstacule(){
+         this.relatedScene.physics.add.collider(this.cheem, this.plataformas, this.relatedScene.obstaculoImpact, null, this.relatedScene);
      }
  }

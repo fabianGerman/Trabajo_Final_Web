@@ -17,6 +17,12 @@ export class PhaseConstructor{
         return this.currentPhase.create();
     }
 
+    update(){
+        //let CurrentPhaseClass = this.phases.pop();
+        //this.currentPhase = new CurrentPhaseClass(this.relatedScene);
+        return this.currentPhase.update();
+    }
+ 
     /**cambio de nivel */
     nextLevel(){
         this.currentPhase.deleteFixedZombies();

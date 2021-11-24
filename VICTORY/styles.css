@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(final.jpg);
+    background-size: cover;
+    
+    
+}
+.buttons button{
+    color: rgb(156, 102, 102) !important;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    background: rgba(221, 13, 13, 0);
+    border: 10px solid;
+    border-color: rgb(19, 16, 16);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 600px;
+}
+button:hover {
+    background: rgb(238, 229, 229);
+    color: #fff !important;
+}
