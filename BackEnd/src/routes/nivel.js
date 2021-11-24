@@ -16,3 +16,4 @@ router.get('/nivel', (req,res) => {
         }
     });
 });
+module.exports = router;

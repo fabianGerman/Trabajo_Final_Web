@@ -20,8 +20,13 @@ app.use((req, res, next) => {
 // Routes
 // app.use(require('./routes/alumnos'));
 // app.use(require('./routes/usuarios'));
-app.use(require('./routes/levels'));
-
+app.use(require('./routes/usuario'));
+app.use(require('./routes/cuenta'));
+app.use(require('./routes/nivel'));
+app.use(require('./routes/plataforma'));
+app.use(require('./routes/zombie'));
+app.use(require('./routes/zombie2'));
+app.use(require('./routes/cofre'));
 
 // Starting the server
 app.listen(app.get('port'), () => {

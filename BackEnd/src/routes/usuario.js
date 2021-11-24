@@ -4,7 +4,7 @@ const mySqlConnection = require('../database.js');
 
 router.post('/login', (req, res) => {
     const {usuario, password} = req.body;
-    mySqlConnection.query('SELECT *FROM usuario where usuario=? and password=?', [usuario, password], (err, rows, fields) =>{
+    mySqlConnection.query('SELECT * FROM usuario where usuario=? and password=?', [usuario, password], (err, rows, fields) =>{
         if(!err && rows.length === 1){
             res.json({
                 message: 'usuario logeado',
@@ -21,7 +21,7 @@ router.post('/login', (req, res) => {
 
 router.post('/usuario/', (req, res) => {
     const {id, usuario, password, nombre, email} = req.body;
-    let sql = 'INNSERT INOT usuarios(idUsuario, usuario, password, nombre, email) VALUES(?,?,?,?,?)';
+    let sql = 'INNSERT INOT usuario(idUsuario, usuario, password, nombre, email) VALUES(?,?,?,?,?)';
     var valores = [id, usuario, password, nombre, email];
     mySqlConnection.query(sql,valores,(err,rows,fields) => {
         if(!err){
@@ -34,7 +34,7 @@ router.post('/usuario/', (req, res) => {
 
 router.delete('/usuario/:usuario', (req,res) => {
     const { usuario } = req.params;
-    mySqlConnection.query('DELETE FROM usuarios WHERE usuario = ?', [usuario], (err, rows,fields) => {
+    mySqlConnection.query('DELETE FROM usuario WHERE usuario = ?', [usuario], (err, rows,fields) => {
         if(!err){
             res.json({ok: true});
         }else{
@@ -44,16 +44,18 @@ router.delete('/usuario/:usuario', (req,res) => {
 });
 
 router.get('/usuario', (req,res) => {
-    mySqlConnection.query('SLECT * FROM usuarios', (err, rows, fields) => {
+    mySqlConnection.query('SLECT * FROM usuario', (err, rows, fields) => {
         if(!err){
             res.send({
-                usuarios: rows
+                usuario: rows
             })
         }else{
             res.send({
-                message: 'no se puede consultar la bd',
-                usuarios: null
+                message: 'no se puede consultar la bd en la tabla usuario',
+                usuario: null
             })
         }
     });
 });
+
+module.exports = router;

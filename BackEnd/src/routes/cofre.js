@@ -16,3 +16,4 @@ router.get('/cofre', (req,res) => {
         }
     });
 });
+module.exports = router;

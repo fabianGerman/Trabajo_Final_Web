@@ -16,3 +16,4 @@ router.get('/plataforma', (req,res) => {
         }
     });
 });
+module.exports = router;

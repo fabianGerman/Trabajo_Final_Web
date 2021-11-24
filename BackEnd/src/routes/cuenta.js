@@ -3,9 +3,9 @@ const router = express.Router();
 const mySqlConnection = require('../database.js');
 
 router.post('/cuenta/', (req, res) => {
-    const {id, user, puntos, nivel, idUsuarioCuenta, nivel} = req.body;
+    const {id, user, puntos, nivel, idUsuarioCuenta, nivelUser} = req.body;
     let sql = 'INNSERT INOT cuenta() VALUES(?,?,?,?,?,?)';
-    var valores = [id, user, puntos, nivel, idUsuarioCuenta, nivel];
+    var valores = [id, user, puntos, nivel, idUsuarioCuenta, nivelUser];
     mySqlConnection.query(sql,valores,(err,rows,fields) => {
         if(!err){
             res.json({ok: true});
@@ -40,3 +40,4 @@ router.get('/cuenta', (req,res) => {
         }
     });
 });
+module.exports = router;

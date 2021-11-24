@@ -16,3 +16,4 @@ router.get('/zombie', (req,res) => {
         }
     });
 });
+module.exports = router;
