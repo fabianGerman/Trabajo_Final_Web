@@ -3,7 +3,7 @@ const router = express.Router();
 const mySqlConnection = require('../database.js');
 
 router.get('/zombie', (req,res) => {
-    mySqlConnection.query('SLECT * FROM zombie', (err, rows, fields) => {
+    mySqlConnection.query('SELECT * FROM zombie', (err, rows, fields) => {
         if(!err){
             res.send({
                 zombie: rows

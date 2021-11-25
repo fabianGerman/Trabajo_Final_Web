@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body style="background-image: url('https://img4.goodfon.com/wallpaper/nbig/9/bc/apocalypse-city-ruins-destroyed-city-hell.jpg');">
       <div class="container !direction !spacing">
           <!--navegador-->
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #3d680c;">
           <a class="navbar-brand" href="../main/index.html">Inicio</a>
           <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
               aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -39,8 +39,8 @@
                 </ul> 
               <form class="form-inline my-2 my-lg-0">
                  <!-- Button trigger modal -->
-                 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
-                    Login
+                 <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#modelId">
+                    Acceder
                  </button>
               </form>
            </div>
@@ -48,52 +48,73 @@
           
           <div class="container col-md-12 border border-primary">
               <form class="form-inline p-3  border border-warning">
-                  <div class="form-group col-md-12 justify-content-md-center  bg-primary">
-                      <h1>Titulo</h1>
+                  <div class="form-group col-md-12 justify-content-md-center" style="background-color: transparent;" >
+                      <h1>Crear un Usuario</h1>
                   </div>
                   <div class="form-group col-md-12 justify-content-md-center " style="padding-bottom: 20px;">
                       <label for=""></label>
-                      <input type="text" name="" id="" class="form-control" placeholder="username" aria-describedby="helpId">
+                      <input type="text" name="" id="" class="form-control" placeholder="Nombre de Usuario" aria-describedby="helpId">
                       <small id="helpId" class="text-muted"></small>
                   </div>
                   <div class="form-group col-md-12 justify-content-md-center" style="padding-bottom: 20px;">
                     <label for=""></label>
-                    <input type="text" name="" id="" class="form-control" placeholder="password" aria-describedby="helpId">
+                    <input type="text" name="" id="" class="form-control" placeholder="Contraseña" aria-describedby="helpId">
                     <small id="helpId" class="text-muted"></small>
                   </div>
                   <div class="form-group col-md-12 justify-content-md-center" style="padding-bottom: 20px;">
                     <label for=""></label>
-                    <input type="text" name="" id="" class="form-control" placeholder="first name" aria-describedby="helpId">
+                    <input type="text" name="" id="" class="form-control" placeholder="Primer Nombre" aria-describedby="helpId">
                     <small id="helpId" class="text-muted"></small>
                   </div>
                   <div class="form-group col-md-12 justify-content-md-center" style="padding-bottom: 20px;">
                     <label for=""></label>
-                    <input type="text" name="" id="" class="form-control" placeholder="telephone" aria-describedby="helpId">
+                    <input type="text" name="" id="" class="form-control" placeholder="Numero de Telefono" aria-describedby="helpId">
                     <small id="helpId" class="text-muted"></small>
                   </div>
                   <div class="form-group col-md-12 justify-content-md-center" style="padding-bottom: 20px;">
                     <label for=""></label>
-                    <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="email">
+                    <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="Correo">
                     <small id="emailHelpId" class="form-text text-muted"></small>
                   </div>
                   <div class="form-group col-md-12 justify-content-md-center" style="padding-bottom: 20px;">
                     <label for=""></label>
                     <select class="form-control"  id="" >
-                      <option value="value1" >value1</option>
-                      <option value="value2">value2</option>
-                      <option value="value3">value3</option>
+                      <option value="value1">Jujuy</option>
+                      <option value="value2">Salta</option>
+                      <option value="value3">Cordoba</option>
+                      <option value="value3">Bs.As.</option>
+                      <option value="value3">Capital Federal</option>
+                      <option value="value3">Catamarca</option>
+                      <option value="value3">Chaco</option>
+                      <option value="value3">Chubut</option>
+                      <option value="value3">Corrientes</option>
+                      <option value="value3">Entre Rios</option>
+                      <option value="value3">Formosa</option>
+                      <option value="value3">La Pampa</option>
+                      <option value="value3">la Rioja</option>
+                      <option value="value3">Mendoza</option>
+                      <option value="value3">Misiones</option>
+                      <option value="value3">Neuquen</option>
+                      <option value="value3">Rio Negro</option>
+                      <option value="value3">San Juan</option>
+                      <option value="value3">San Luis</option>
+                      <option value="value3">Santa Cruz</option>
+                      <option value="value3">Santa Fe</option>
+                      <option value="value3">Santiago del Estero</option>
+                      <option value="value3">Tierra del fuego</option>
+                      <option value="value3">Tucuman</option>
                     </select>
-                    <small id="helpId" class="text-muted">country</small>
+                    <small id="helpId" class="text-muted">Provincia</small>
                   </div>
                   <div class="form-group col-md-12 justify-content-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="reset" class="btn btn-primary">reset</button>
+                    <button type="submit" class="btn btn-primary">Crear</button>
+                    <button type="reset" class="btn btn-primary">Atras</button>
                   </div>
                   
               </form>
           </div>
           <!--footer-->
-      <footer class="bg-primary">
+      <footer style="background-color: black;">
         <center>
             <a href="https://www.facebook.com">
                 <svg xmlns="http://www.w3.org/2000/svg" style="background-color: black;" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -113,45 +134,45 @@
         </center>
       </footer>
           <!-- Modal Login-->
-        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
+          <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content" style="background-color: cornflowerblue;">
+                  <div class="modal-header">
+                      <h5 class="modal-title">Se un Miembro</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <div class="modal-body" style="background-color: white;">
+                  <div class="container-fluid">
+                    <form class="row g-3 needs-validation" action="" >
+                      <div class="col-md-6">
+                        <label for="validationCustom01" class="form-label">Nombre de Usuario</label>
+                        <input type="text" class="form-control" id="validationCustom01"  required>
+                        <div class="valid-feedback">
+                          Valido
+                        </div>
+                      </div> 
+                      <div class="col-md-6">
+                        <label for="validationCustom02" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="validationCustom02" required>
+                        <div class="valid-feedback">
+                          Valido
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Acceder</button>
+                      </div>
+                    </form>
                   </div>
-              <div class="modal-body">
-                <div class="container-fluid">
-                  <form class="row g-3 needs-validation" action="" >
-                    <div class="col-md-6">
-                      <label for="validationCustom01" class="form-label">User name</label>
-                      <input type="text" class="form-control" id="validationCustom01"  required>
-                      <div class="valid-feedback">
-                        Looks good!
-                      </div>
-                    </div> 
-                    <div class="col-md-6">
-                      <label for="validationCustom02" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="validationCustom02" required>
-                      <div class="valid-feedback">
-                        Looks good!
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <button class="btn btn-primary" type="submit">Enter</button>
-                    </div>
-                  </form>
                 </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save</button>
+                <div class="modal-footer" style="background-color: cornflowerblue;">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         
         <script>
           $('#exampleModal').on('show.bs.modal', event => {

@@ -6,13 +6,16 @@ export class Game extends Phaser.Scene{
 
     init(){
         this.phaseConstructor = new PhaseConstructor(this);//intancio el constructor
+        this.isFlapMode = false;
     }
 
     preload(){
         this.load.image('cheem', '../../assets/image.png');
         this.load.image('groundBottom','../../assets/groundBottom.png');
         this.load.image('zombie', '../../assets/zombie.png');
+        this.load.image('zombie2', '../../assets/zombie2.png')
         this.load.image('plataform', '../../assets/plataforma.png');
+        this.load.image('portalCopt', '../../assets/portalFlap.png');
         this.load.image('nivel1', '../../assets/nivel1.jpeg');
         this.load.image('nivel2', '../../assets/nivel2.jpeg');
         this.load.image('nivel3', '../../assets/nivel3.jpeg');
@@ -46,12 +49,25 @@ export class Game extends Phaser.Scene{
 
     zombieImpact(cheem, zombie){
         cheem.disableBody(true,true);
-        
+         
+    }
+    portalImpact(cheem,Portal){
+        if (this.phaseConstructor.isPhaseFinished()) {
+            this.phaseConstructor.nextLevel();
+        }     
     }
 
     obstaculoImpact(cheem, obstaculo){
         this.physics.add.collider(cheem, obstaculo, null, null);
     }
+    endGame(completed = false) {
+        if(! completed) {
+          this.scene.start('gameover');
+        } else {
+          this.scene.start('congratulations');
+        }
+      }
+      
 /*
     move(){
         if(this.cursor.left.isDown){

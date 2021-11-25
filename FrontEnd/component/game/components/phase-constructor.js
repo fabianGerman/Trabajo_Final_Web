@@ -6,23 +6,21 @@ export class PhaseConstructor{
     constructor(scene){
         this.relatedScene = scene;
         this.phases = [
+            Phase3,
+            Phase2,
             Phase1
         ];
     }
-
     /**creo el nivel */
     create(){
         let CurrentPhaseClass = this.phases.pop();
         this.currentPhase = new CurrentPhaseClass(this.relatedScene);
         return this.currentPhase.create();
     }
-
+    /**actualiza el nivel */
     update(){
-        //let CurrentPhaseClass = this.phases.pop();
-        //this.currentPhase = new CurrentPhaseClass(this.relatedScene);
         return this.currentPhase.update();
     }
- 
     /**cambio de nivel */
     nextLevel(){
         this.currentPhase.deleteFixedZombies();
@@ -32,9 +30,8 @@ export class PhaseConstructor{
             return this.create();
         }
     }
-
-    /** */
+    /**finaliza el nivel  */
     isPhaseFinished(){
-        return this.currentPhase.isPhaseFinished();
+        return this.currentPhase.isPhaseFinished();                                                                     
     }
 }

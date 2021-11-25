@@ -44,7 +44,7 @@ router.delete('/usuario/:usuario', (req,res) => {
 });
 
 router.get('/usuario', (req,res) => {
-    mySqlConnection.query('SLECT * FROM usuario', (err, rows, fields) => {
+    mySqlConnection.query('SELECT * FROM usuario', (err, rows, fields) => {
         if(!err){
             res.send({
                 usuario: rows

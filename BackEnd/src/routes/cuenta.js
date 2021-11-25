@@ -27,7 +27,7 @@ router.delete('/cuenta/:usuario', (req,res) => {
 });
 
 router.get('/cuenta', (req,res) => {
-    mySqlConnection.query('SLECT * FROM cuenta', (err, rows, fields) => {
+    mySqlConnection.query('SELECT * FROM cuenta', (err, rows, fields) => {
         if(!err){
             res.send({
                 cuenta: rows
